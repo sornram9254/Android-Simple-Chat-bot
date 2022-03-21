@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+    <ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
+    android:fillViewport="true">
+        <TextView
+            android:id="@+id/txtview_showMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:textSize="36sp" />
+	</ScrollView>
+	
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/txt_input"
+            android:textSize="26sp"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+    		android:lines="1"
+    		android:maxLines="1"
+            android:hint="@string/msg_hit" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/btn_send"
+            android:textSize="26sp"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_weight="0.20"
+            android:onClick="sendMessage"
+            android:text="@string/btn_send" />
+
+    </LinearLayout>
+
+</LinearLayout>
